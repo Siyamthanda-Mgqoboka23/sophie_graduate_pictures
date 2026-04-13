@@ -350,7 +350,7 @@
         "images/PictureWithTheBishopandFamily.JPG",
         "images/Sophieandparentsandspiritualparents.JPG",
         "images/BishopandXoliswa.JPG",
-        "images/Sophieandfriends.JPG",
+        "images/Sophieandfreinds.JPG",
         "images/SophieandMOM&lilSis.JPG"
     ];
 
@@ -396,44 +396,9 @@
         });
         
     
-        
-        const specialImgDiv = specialCard.querySelector('.special-placeholder');
-        specialImgDiv.addEventListener('click', () => {
-            openLightbox(0, true);
-        });
-        
-        const specialBtn = specialCard.querySelector('#specialDownloadBtn');
-        specialBtn.addEventListener('click', () => {
-            alert("💜 This is a special memory! Take a screenshot of this beautiful moment to keep it forever. 💜");
-        });
-        
-        galleryContainer.appendChild(specialCard);
+      
     }
 
-    // Lightbox functions
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-
-    function openLightbox(index, isSpecial) {
-        currentIsSpecial = isSpecial;
-        if (isSpecial) {
-            lightboxImg.style.display = 'none';
-            lightboxCaption.innerHTML = '⭐ SPECIAL MOMENT ⭐<br><br>💜 A beautiful memory from Sophie\'s Graduation Blessing Day 💜<br><br>Take a screenshot to save this moment!';
-            lightboxCaption.style.fontSize = '1.5rem';
-            lightboxCaption.style.textAlign = 'center';
-            lightboxCaption.style.padding = '2rem';
-        } else {
-            lightboxImg.style.display = 'block';
-            lightboxImg.src = images[index];
-            lightboxCaption.innerHTML = imageTitles[index];
-            lightboxCaption.style.fontSize = '1.2rem';
-            lightboxCaption.style.textAlign = 'center';
-            lightboxCaption.style.padding = '8px 20px';
-            currentImageIndex = index;
-        }
-        lightbox.classList.add('active');
-    }
 
     function closeLightbox() {
         lightbox.classList.remove('active');
