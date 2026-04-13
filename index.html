@@ -395,21 +395,7 @@
             galleryContainer.appendChild(card);
         });
         
-        // Add Special Moment Card
-        const specialCard = document.createElement('div');
-        specialCard.className = 'photo-card';
-        specialCard.innerHTML = `
-            <div class="special-placeholder">
-                <span>⭐</span>
-                <span>🎓</span>
-                <p>SPECIAL MOMENT</p>
-                <p style="font-size: 1rem; margin-top: 0.5rem;">A Blessed Day ✨</p>
-            </div>
-            <div class="photo-name">⭐ SPECIAL MOMENT ⭐</div>
-            <button class="download-btn" id="specialDownloadBtn" style="background: linear-gradient(105deg, #e67e22, #f39c12);">
-                ⬇️ Save Special Memory
-            </button>
-        `;
+    
         
         const specialImgDiv = specialCard.querySelector('.special-placeholder');
         specialImgDiv.addEventListener('click', () => {
